@@ -1,0 +1,22 @@
+title: mysql Gem + MacPorts MySQL
+author: Andrew
+date: 2009/01/25
+slug: mysql-gem-macports-mysql
+
+I always forget this… so this is as much a note for me as anything else.
+
+Especially because I’m basically just lifting this info from [here][1].
+
+	sudo gem install mysql -- \
+	--with-mysql-include=/opt/local/include/mysql5 \
+	--with-mysql-lib=/opt/local/lib/mysql5 \
+	--with-mysql-config=/opt/local/lib/mysql5/bin/mysql_config
+
+Despite what the linked website says, it appears that this command works on leopard just fine… 
+no need for any changes.
+
+
+
+
+
+[1]: http://codeintensity.blogspot.com/2007/09/installing-ruby-mysql-gem-with-macports.html

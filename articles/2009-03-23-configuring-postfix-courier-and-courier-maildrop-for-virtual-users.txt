@@ -1,0 +1,35 @@
+title: Configuring Postfix, Courier, and Courier-Maildrop for Virtual Users
+author: Andrew
+date: 2009/03/23
+
+Here are some highlights for configuring Postfix to use Courier-Maildrop for local delivery.
+
+This allows some advantages over just having postfix deliver, because you can do server-side 
+filtering of spam and mailing list messages to de-clutter your inbox.
+
+All these notes are based on configuring the setup on Ubuntu 8.10 (Intrepid Ibex) with Debian 
+Lenny’s courier-maildrop
+
+The following are snippets from my configuration files, highlighting the changes that I had to 
+make, from an already existing mail server. If these look unfamiliar, or you need more assistance 
+setting up the basic framework of a Postfix + Courier-IMAP mail server, start here.
+
+/etc/courier/maildroprc:
+	EXTENSION="$1"
+	RECIPIENT=tolower("$2")
+	USER="$3"
+	HOST="$4"
+	SENDER="$5"
+	DEFAULT="/home/vmail/$HOST/$USER/."
+
+/etc/postfix/main.cf:
+	virtual_transport = maildrop
+	maildrop_destination_recipient_limit = 1
+
+/etc/postfix/master.cf:
+	maildrop unix   -       n       n       -       -       pipe
+	flags=ODRhu user=vmail argv=/usr/bin/maildrop -w 90 -d ${user}@${nexthop} ${extension} ${recipient} ${user} ${nexthop}
+
+So if you have a working mail server: make these changes, sudo /etc/init.d/postfix restart, and 
+then get to work writing your .mailfilters!
+

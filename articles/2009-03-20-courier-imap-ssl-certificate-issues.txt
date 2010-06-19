@@ -1,0 +1,17 @@
+title: Courier IMAP SSL Certificate Issues
+author: Andrew
+date: 2009/03/20
+
+If you are having issues getting an SSL connection to Courier IMAP. Check your certificate files.
+
+In /etc/courier/imapd-ssl:
+	TLS_CERTFILE=/etc/ssl/private/certificate.pem
+
+Courier is expecting a PEM file for TLS_CERTFILE with your certificate and private key. Do not use 
+just your certificate.
+
+Also, if you require intermediate certificates to complete the trust chain, you can include them in 
+this file.
+
+MAKE SURE that you have proper permissions on this file to the security of your private key.
+

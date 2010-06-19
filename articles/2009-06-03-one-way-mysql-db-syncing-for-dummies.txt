@@ -1,0 +1,40 @@
+title: One-way MySQL DB Syncing for Dummies
+author: Andrew
+date: 2009/06/03
+
+To ease my development while on the move, I have local development copies of my websites running on 
+my MacBook Pro. This has always worked pretty well for me, as content for my websites was created, 
+predominantly, by myself, and when new content was created at a single site I could sync that 
+database manually and get an up to date local content set.
+
+With my recent efforts into [lifestreaming][1], this is no longer the case. My content now comes in 
+whenever I post content on any website. I’m a fairly frequent user of the internet services that 
+feed my lifestream ([Twitter][2], [Delicious][3], [Flickr][4], etc), and keeping the content on my 
+local version up to date was turned into a troublesome task, forcing manual, tedious syncing each 
+time I went to work.
+
+Without further explanation, here are the steps I took to make a one line MySQL database syncing command. There may be better ways to do this and if you know them, please comment.
+
+1. Setup a MySQL “dump” user. Mine is cleverly named “dump” and is passwordless, although if you are 
+more security conscious than I am, you can add a password of your choosing. On the server, log into 
+mysql and issue this GRANT statement from a user with the proper permissions.
+
+	`GRANT SELECT, LOCK TABLES ON `dbname_remote`.* TO 'dump'@'localhost';`
+
+2. Create a bash alias
+
+	`# ~/.bashrc `
+	
+	`ALIAS clone_lifestream='ssh -q -t hostname "mysqldump -u dump dbname_remote" | mysql -u root dbname_local'`
+
+Notes: For this example, you need to replace a few things.
+1. dbname = the remote database name
+2. hostname = the remote hostname
+3. dbname_local = the local database name
+4. clone_lifestream = the name of the alias, can be anything.
+
+[1]: http://amdavidson.me
+[2]: http://twitter.com/amdavidson
+[3]: http://delicious.com/amdavidson
+[4]: http://flickr.com/photos/amdavidson
+

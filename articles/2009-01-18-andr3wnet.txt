@@ -1,0 +1,15 @@
+title: andr3w.net
+date: 2009/01/18
+author: Andrew
+
+Welcome to andr3w.net.
+
+This site has a very simple purpose, in my free time I code my personal site, but that site is 
+becoming more and more of a photoblog and less and less web development content seems relevant 
+there (although I have always kept it to a minimum).
+
+andr3w.net will be my second home on the web with information about my current effort with rails, 
+(x)html, css, js, and whatever else I’m tinkering with at the time.
+
+Check back soon for a restyling from the default Mephisto style and more content as free time 
+allows.

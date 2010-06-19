@@ -1,0 +1,17 @@
+title: Sweetcron Stream Updating Cron Job
+author: Andrew
+date: 2009/04/20
+
+So the Sweetcron documentation isn’t altogether clear on what you should put in cron for it to 
+update automatically, rather than slowing down a user every 30 minutes.
+
+It’s fairly intuitive, but for those missing this logical step, do the following.
+
+Change the setting in the admin panel from psuedo-cron to true-cron, and take note of the URL.
+
+Then put the following in your crontab file (easily accessed with ‘crontab -e’ on a debian machine):
+	*/5 * * * * curl http://your/true-cron/url
+	
+You can change the 5 to be the number of minutes between updates that you want, and you’ll 
+definitely want to change the URL to the one listed in your Sweetcron’s admin page.
+

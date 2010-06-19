@@ -1,0 +1,11 @@
+title: Bad HTML
+author: Andrew
+date: 2009/04/09
+
+Sorry to any visitors affected by the malformed site that cropped up due to my last post…
+
+Old habits die hard, and I write too many of my posts in HTML only to have a missing quotation mark 
+leave my page poorly rendered. I need to rely on the (fairly) excellent built in wordpress wysiwyg 
+editor. At least until I write a proper, custom blog engine for this page…
+
+The affected post has been fixed and you can now go about your business.

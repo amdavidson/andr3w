@@ -1,0 +1,58 @@
+title: Configuring Spamassassin as a Daemon on Ubuntu Intrepid
+author: Andrew
+date: 2009/03/20
+
+Here is the process I took to install Spamassassin as a daemon working with Postfix to process 
+incoming mail.
+
+I’ll also be trying to reduce the memory footprint while still getting acceptable performance. Mind 
+you, this is being implemented on a low volume server, so these settings may not be applicable to a 
+production server with lots of users.
+
+First, let’s do some prep work on the command line:
+	$ sudo aptitude install spamassassin spamc
+	$ sudo groupadd -u 5001 spamd
+	$ sudo useradd -u 5001 -g spamd -s /sbin/nologin -d /var/lib/spamassassin spamd
+	$ sudo mkdir /var/lib/spamassassin
+	$ sudo chown spamd:spamd /var/lib/spamassassin
+
+Now edit `/etc/default/spamassassin` and change the lines below
+	ENABLED=1
+	SAHOME="/var/lib/spamassassin"
+	OPTIONS="--create-prefs --max-children 2 --username spamd -H ${SAHOME}"
+
+
+Edit `/etc/spamassassin/local.cf`
+	ENABLED=1
+	rewrite_header Subject **SPAM _SCORE_**
+	required_score 5.0
+	use_bayes 1
+	bayes_auto_learn 1
+	use_dcc 0
+	use_pyzor 0
+	use_razor2 0
+
+Now edit `/etc/postfix/master.cf` and change it to look like this:
+	# /etc/postfix/master.cf
+	26   inet  n - - - - smtpd
+		 -o content_filter=spamassassin
+	
+	# Add this segment to end of file:
+	
+	# Spamassassin processing filter
+	spamassassin unix - n n - - pipe
+		 user=spamd argv=/usr/bin/spamc -e
+		 /usr/sbin/sendmail -oi -f ${sender} ${recipient}
+
+Now reboot some stuff
+	$ sudo /etc/init.d/spamassassin restart
+	$ sudo postfix reload
+
+Now test by sending email to yourself. If you view the full headers it should now have X-SPAM 
+headers in it.
+
+If you send an email with “XJS*C4JDBQADN1.NSBN3*2IDNEN*GTUBE-STANDARD-ANTI-UBE-TEST-EMAIL*C.34X” 
+in the body of the email, it is guaranteed to be flagged as SPAM, and is a great way to test your 
+spam filter.
+
+

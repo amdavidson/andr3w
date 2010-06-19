@@ -1,0 +1,16 @@
+title: Installing Nokogiri Gem On Ubuntu
+author: Andrew
+date: 2009/01/19
+
+If you cannot install the nokogiri gem on ubuntu (required or recommended) for Mephisto.
+
+You have to install two other libraries first that may or may not already be installed on your 
+computer:
+	sudo apt-get install libxml2-dev libxslt1-dev
+
+Simply installing libxml-ruby or libxml1 won’t satisfy the requirements.
+
+Thanks to [hightechsorcery.com][1] for the info.
+
+
+[1]: http://hightechsorcery.com/2008/12/howto-install-nokogiri-gem-ubuntu

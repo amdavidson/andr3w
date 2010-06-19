@@ -1,0 +1,29 @@
+title: github? we don’t need no stinking github…
+date: 2009/02/02
+author: Andrew
+
+I use git for all my projects… I love the ability to commit changes when I’m on an airplane or 
+stuck somewhere without internet access. However, I still like to be able to push my git project 
+to a remote server for backup and accessibility, and I’m not going to pay for [github][1]. Don’t 
+get me wrong, github is fine for public projects and collaborative development, but for my personal 
+development stuff, it’s an unnecessary expense.
+
+Well, I always forget how to setup a remote master so that I can push and pull and keep a backup 
+on a remote server. Here are my quick notes…. for a detailed explanation see Tim Lucas’s 
+[tutorial][2].
+
+On server:
+	mkdir /srv/git/whatever
+	git init /srv/git/whatever
+
+
+On local machine: 
+	git remote add origin ssh://host/srv/git/whatever
+	git push origin master
+
+And you're all set!
+
+
+
+[1]: http://github.com
+[2]: http://toolmantim.com/articles/setting_up_a_new_remote_git_repository

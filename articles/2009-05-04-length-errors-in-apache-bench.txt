@@ -1,0 +1,22 @@
+title: Length Errors in Apache Bench
+author: Andrew
+date: 2009/05/04
+
+Are you seeing errors for content length in your [Apache Bench][1] tests of your webserver?
+
+I had a hell of a time wondering what was going wrong with my webserver under load and finally 
+found the answer [here][2].
+
+Turns out that Apache Bench takes the first pulled request and compares the length to all 
+subsequent requests. Makes sense for a purely static page, but when you have a random image 
+cropping up, you’re sure to see at least a couple bits difference in length.
+
+So if you’re serving straight, hand coded HTML, enjoy the feeling of knowing that you’re getting 
+the same length content each and every time… but if you’re like the rest of us (and anyone who 
+would actually be using Apache Bench) feel free to rage that there’s no [command line switch][3] to 
+turn off that silly notification.
+
+
+[1]: http://httpd.apache.org/docs/2.0/programs/ab.html
+[2]: http://markmail.org/message/6zsvfw67rjy7hu4x#query:apachebench%20requests%20fail%20length+page:1+mid:b7wzpg43n3eiicu5+state:results
+[3]: http://httpd.apache.org/docs/2.0/programs/ab.html#options

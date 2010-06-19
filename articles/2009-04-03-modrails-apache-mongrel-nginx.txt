@@ -1,0 +1,21 @@
+title: mod_rails && apache || mongrel && nginx
+author: Andrew
+date: 2009/04/03
+slug: modrails-apache-mongrel-nginx
+
+Switch…
+
+That’s all I have to say. Passenger/mod_rails is so much faster and more competent at serving my 
+crappy RoR code than my hacked together mongrel/nginx scheme that I had before.
+
+My ram usage spikes much more when visitors hit the site, but never starts swapping. The increased 
+ram usage is more than worth it for the HUGELY increased speed that I’m seeing by the dynamic 
+mongrel management.
+
+Even better, when the visitors leave (as often happens), the ram usage settles down to the same 
+place it did with my nginx and mongrel combo.
+
+Enjoy the increased speed and stability [AMDavidson.com][1] visitors.
+
+[1]: http://amdavidson.com
+

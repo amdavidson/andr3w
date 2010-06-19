@@ -1,0 +1,20 @@
+title: Search Field Text Without a Submit Button
+author: Andrew
+date: 2010/03/19
+
+If you are trying to implement a search field in your website but do not plan on having a submit 
+button (relying on the user to click enter), you’re going to want to put instructions somewhere.
+
+In my case, I decided to populate the box it self with the words “Type and press enter to search”.
+	<input type="text" name="q" value="Type and press enter to search." id="searchfield" />
+
+Unfortunately, this left the user with the task of manually deleting the text in the box before 
+searching. Adding a tiny bit of javascript to your HTML element will automatically remove the text 
+when the user clicks on it and if the user doesn’t enter anything it will add the text back when 
+the user clicks away.
+	<input type="text" name="q" value="Type and press enter to search." id="searchfield" 
+	onfocus="if ( this.value=='Type and press enter to search.' ) { this.value = ''; }"
+	onblur="if ( this.value=='' ) { this.value = 'Type and press enter to search.'; }" />
+
+Hopefully it works for you all, I have only tested it in Firefox and Safari on a Mac.
+

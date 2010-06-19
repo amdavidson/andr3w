@@ -1,0 +1,25 @@
+title: Minimalism Revisited
+author: Andrew
+date: 2009/05/04
+
+Well, this site just got more tweaking today to make the theme feel a bit more “andr3w”. I’m pretty 
+comfortable with it now, it will certainly still change, but I don’t think it will be all that 
+much.
+
+The theme that I based my theme on is called [Minimalism][1] and it was done by 
+[Christian Geneahr][2]. In turn it was based on the classic [Kubrick][3], a theme so widely used 
+and appreciated, I would call it the “Pappy” of all Wordpress themes.
+
+With Kubrick’s fine lineage, Christian was able to make quite a nice minimalist theme. It just 
+needed a couple more refinements for me to feel totally comfortable with it and now that my changes 
+are somewhat stable, it’s time for me to do my GPL duty.
+
+So, without further adieu: [Minimalism-Revisited][4].
+
+
+
+[1]: http://www.genaehr.com/minimalism/
+[2]: http://www.genaehr.com/
+[3]: http://binarybonsai.com/wordpress/kubrick/
+[4]: http://andr3w.net/minimalism-revisited/
+

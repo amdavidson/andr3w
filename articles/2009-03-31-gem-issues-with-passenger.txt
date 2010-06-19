@@ -1,0 +1,20 @@
+title: Gem Issues with Passenger
+author: Andrew
+date: 2009/03/31
+
+I was <del>ignorantly</del> happily letting my gems be pulled in automatically on my previous 
+server using Nginx + Mongrel_Cluster and this seemed to pose no problems.
+
+BUT! when I switched to a new host, I went with an Apache + Passenger ([mod_rails][1]) setup and my 
+servers would start but would just offer “Error 500″.
+
+I checked the logs and it seemed that it wasn’t loading [RedCloth][2] so I added the following to my 
+environment.rb file and it all worked fine!
+
+In config/environment.rb:
+	require 'rubygems'
+	require 'redcloth'
+	
+	
+[1]: http://www.modrails.com/
+[2]: http://redcloth.org/

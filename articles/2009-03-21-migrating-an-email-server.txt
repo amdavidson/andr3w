@@ -1,0 +1,27 @@
+title: Migrating an Email Server
+author: Andrew
+date: 2009/03/21
+
+Here are the steps that I went through to migrate my Postfix/Courier server from Slicehost to Mosso.
+
+1. Check current DNS MX records for applicable domains. I had mine set to all go through a central 
+A record (my mail server) so it was easy.
+1. Set MX records to expire quickly (I think the minimum is 60 minutes). This can take 24 hours to 
+propogate, so do this early, and then you’ll have time to do the rest of the processing.
+1. Configure Postfix/Courier/IMAP as desired on new server. There are a lot of howtos on this, and 
+some hints on this site, so I won’t go over how to do this here.
+1. Test server to ensure that email can go in and out and that any spam filtering or other 
+processes are operating well.
+1. I use MySQL for managing users and forwardings, so I dumped and locked my existing database, and 
+copied that to the new database.
+1. Rsync maildirs over from the old server to the new server. This can take a while, depending on 
+server speed and bandwidth.
+1. Ensure that Postfix and Courier are up and running on the new server.
+1. Change central DNS record to point to new server IP address.
+1. Stop Postfix and Courier on old server. This could lead to a couple of bounced emails, but in 
+all likelihood the sending email servers will retry and find their way to the new server.
+1. Watch closely.
+
+There should be very little loss of email, connectivity, or data using this path.
+
+If anyone has any better suggestions, let me know.

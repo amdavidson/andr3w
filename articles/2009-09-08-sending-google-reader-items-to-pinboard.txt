@@ -1,0 +1,34 @@
+title: Sending Google Reader Items to Pinboard
+author: Andrew
+date: 2009/09/08
+
+I just started using [Pinboard][1] as an alternative to my previous use of [Delicious][2] and 
+[Instapaper][3].
+
+One cool thing that I was able to work out (that I had trouble with using Instapaper) is using the 
+new [Send To][4] feature in [Google Reader][5], I can now send links directly to Pinboard as unread 
+items or bookmarks.
+
+The [Pinboard blog][5] has basic instructions for sending as bookmarks:
+
+Go to Settings, and then the “Send To” tab. Click the “Create Custom Link” and enter the following:
+
+	Name: Pinboard
+	
+	Url: http://pinboard.in/add?url=${url}&title=${title}
+	
+	Icon Url: http://pinboard.in/favicon.ico
+
+But to send it as an unread item just requires changing the URL to:
+
+	http://pinboard.in/add?later=yes&noui=yes&jump=close&url=${url}&title=${title}
+
+If you’re a Pinboard user, enjoy!
+
+
+[1]: http://pinboard.in
+[2]: http://delicious.com/amdavidson
+[3]: http://instapaper.com
+[4]: http://googlereader.blogspot.com/2009/08/flurry-of-features-for-feed-readers.html
+[5]: http://google.com/reader
+[6]: http://pinboard.in/blog/26/

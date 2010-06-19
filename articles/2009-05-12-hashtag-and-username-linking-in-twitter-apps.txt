@@ -1,0 +1,20 @@
+title: Hashtag and Username Linking in Twitter Apps
+author: Andrew
+date: 2009/05/12
+
+Are you trying to add automatic [hashtag][1] and username hot linking in your PHP twitter app?
+
+I just tried to do this with my [amdavidson.me][2] lifestreaming site. It’s just two nested regular 
+expressions. If there’s some problem with nested preg_replace functions, or if any regular 
+expression geniuses have better ideas, feel free to comment.
+
+But if not, here’s a little code for you, should make things super easy. It assumes your tweet 
+variable is $tweet, replace with whatever you’d need.
+	echo preg_replace('/\#([a-zA-Z0-9_]{1,15})?/', 
+		"<a href=\"http://hashtags.org/tag/$1\">#$1</a>", 
+		preg_replace('/\@([a-zA-Z0-9_]{1,15})?/', 
+		"<a href=\"http://twitter.com/$1\">@$1</a>", 
+		$tweet));
+
+[1]: http://hashtags.org
+[2]: http://amdavidson.me
