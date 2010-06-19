@@ -1,5 +1,6 @@
 
 require 'toto'
+require 'nokogiri'
 
 # Rack config
 use Rack::Static, :urls => ['/css', '/js', '/images', '/favicon.ico'], :root => 'public'
@@ -29,7 +30,7 @@ toto = Toto::Server.new do
 
   set :url, 'http://andr3w.heroku.com/'
   set :title, 'andr3w'
-  set :author, 'amdavidson'
+  set :author, 'andrew'
 
   set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
 end
