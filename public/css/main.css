@@ -1,7 +1,7 @@
 html { margin: 20px }
 body {
   margin: 0 auto;
-  font-family: 'Baskerville', Georgia, Times, serif;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
   font-size: 20px;
   line-height: 30px;
   padding: 15px;
@@ -88,14 +88,14 @@ h1, h2, h3, h4 {
   margin: 0;
   font-weight: 600;
 }
-ul, li {
-  list-style-type: none;
-}
 code {
-  font-family: 'Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier, mono;
+  font-family: 'Monaco', Courier, mono;
+	font-size:12px;
 }
 pre {
   padding: 20px;
+	width:650px;
+	overflow:auto;
 }
 blockquote {
   font-style: italic;
