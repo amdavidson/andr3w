@@ -13,8 +13,8 @@ searching. Adding a tiny bit of javascript to your HTML element will automatical
 when the user clicks on it and if the user doesn’t enter anything it will add the text back when 
 the user clicks away.
 	<input type="text" name="q" value="Type and press enter to search." id="searchfield" 
-	onfocus="if ( this.value=='Type and press enter to search.' ) { this.value = ''; }"
-	onblur="if ( this.value=='' ) { this.value = 'Type and press enter to search.'; }" />
+	  onfocus="if ( this.value=='Type and press enter to search.' ) { this.value = ''; }"
+	  onblur="if ( this.value=='' ) { this.value = 'Type and press enter to search.'; }" />
 
 Hopefully it works for you all, I have only tested it in Firefox and Safari on a Mac.
 

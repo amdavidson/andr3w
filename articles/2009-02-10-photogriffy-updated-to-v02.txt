@@ -10,7 +10,7 @@ prototyping framework.
 
 This is part of a larger update to the way I post my photos to the web. It’s getting a bit 
 scattered with some photos posted to [AMDavidson.com][3], some to [AMDavidson.me][4], some to 
-Flickr[5], and even a few to Twitpic with very little planning or organization.
+[Flickr][5], and even a few to Twitpic with very little planning or organization.
 
 So, I’m now working towards putting everything on Flickr and then basing my other websites on that 
 content so the content is unified between the sites and doesn’t require bouncing around the web to 

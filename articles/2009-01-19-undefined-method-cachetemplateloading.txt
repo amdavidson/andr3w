@@ -7,6 +7,7 @@ error ``undefined method `cache_template_loading='`` check out this rails [commi
 
 You may have a deprecated method and need to remove the following from your
 config/environments/production.rb:
+
 `config.action_view.cache_template_loading            = true`
 
 

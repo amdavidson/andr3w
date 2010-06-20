@@ -14,9 +14,7 @@ The [Pinboard blog][5] has basic instructions for sending as bookmarks:
 Go to Settings, and then the “Send To” tab. Click the “Create Custom Link” and enter the following:
 
 	Name: Pinboard
-	
-	Url: http://pinboard.in/add?url=${url}&title=${title}
-	
+	Url: http://pinboard.in/add?url=${url}&title=${title}	
 	Icon Url: http://pinboard.in/favicon.ico
 
 But to send it as an unread item just requires changing the URL to:

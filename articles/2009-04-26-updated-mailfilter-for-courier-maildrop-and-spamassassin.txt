@@ -8,14 +8,14 @@ little more.
 
 Previously, all messages that got more than 5 points in SpamAssassin tests were flagged and sent 
 to my .Spam folder. This got to be a bit of an issue as I still check there to make sure that no 
-emails are miscategorized… Call me crazy, but I’m a bit anal when it comes to that stuff. (I missed 
-an interview because of Gmail’s filters, but that’s a story for another day).
+emails are miscategorized… Call me crazy, but I’m a bit anal when it comes to that stuff. (I once 
+missed an interview because of Gmail’s filters, but that’s a story for another day).
 
 For the last few days, I’ve been reviewing the spam counts for both the more cleverly hidden spam 
 and the less-than-clever spam. I’ve come to realize that while the odds are low that any real 
 emails will get marked as spam if they do they’ll definitely get a score less than 10. So to combat 
-the large amount of spam that’s now coming through, emails with greater than 10 points will now be 
-sent directly to the trash.
+the large amount of spam that’s now coming through, maildrop will halt delivery on any emails with 
+a score higher than 10.
 
 Here’s what I put in my .mailfilter file for courier-maildrop:
 	if ( /^X-Spam-Level: \*\*\*\*\*\*\*\*\*.*$/ )

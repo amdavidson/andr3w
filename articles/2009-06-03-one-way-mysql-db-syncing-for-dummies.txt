@@ -19,15 +19,14 @@ Without further explanation, here are the steps I took to make a one line MySQL 
 more security conscious than I am, you can add a password of your choosing. On the server, log into 
 mysql and issue this GRANT statement from a user with the proper permissions.
 
-	`GRANT SELECT, LOCK TABLES ON `dbname_remote`.* TO 'dump'@'localhost';`
+	GRANT SELECT, LOCK TABLES ON `dbname_remote`.* TO 'dump'@'localhost';
 
-2. Create a bash alias
+2. Create a bash alias in `~/.bashrc` :
 
-	`# ~/.bashrc `
+	ALIAS clone_lifestream='ssh -q -t hostname "mysqldump -u dump dbname_remote" | mysql -u root dbname_local'
 	
-	`ALIAS clone_lifestream='ssh -q -t hostname "mysqldump -u dump dbname_remote" | mysql -u root dbname_local'`
-
 Notes: For this example, you need to replace a few things.
+
 1. dbname = the remote database name
 2. hostname = the remote hostname
 3. dbname_local = the local database name
