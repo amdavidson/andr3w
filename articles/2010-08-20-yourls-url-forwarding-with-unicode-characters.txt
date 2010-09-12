@@ -1,0 +1,15 @@
+title: YOURLS URL Forwarding with Unicode Characters
+author: Andrew
+date: 2010/08/20
+
+
+I have been setting up a [YOURLS](http://yourls.org) server at amd➧.ws just to have a shortened URL 
+that a is a bit more unique than [bit.ly](http://bit.ly) or [tr.im](http://tr.im).
+
+Unfortunately, I had issues with setting up YOURLS to properly handle my unicode URL. I was getting 
+redirects to WEBSITE.WS parking pages in Safari and failures to redirect in Firefox 3.6 and 4.0 when 
+I tried to visit shortened urls that did not exist yet, like http://amd➧.ws/nonsense.
+
+The issue lied in the encoding of my config.php file. If you are seeing problems like this, try 
+using a good text editor like BBedit and save the file with "UTF-8 with BOM" encoding 
+and see if that is more successful for you, it solved all my issues.
