@@ -8,7 +8,7 @@
     <title>
 			<% if @path == 'index' %>
 			    andr3w
-			<% elsif @path.split('/').compact.length == 4 %>
+			<% elsif @path.split('/').compact.length == 3 %>
 			    <%= title %> - andr3w
 			<% else %>
 			    <%= @path.capitalize.gsub(/[-]/, ' ') %> - andr3w
