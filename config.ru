@@ -28,7 +28,7 @@ toto = Toto::Server.new do
   # set :cache,      28800                                    # cache duration, in seconds
 
 
-  set :url, 'http://andr3w.heroku.com/'
+  set :url, 'http://andr3w.net/'
   set :title, 'andr3w'
   set :author, 'andrew'
 
