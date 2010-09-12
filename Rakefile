@@ -13,7 +13,7 @@ task :new do
   article << "\n"
   article << "Once upon a time...\n\n"
 
-  path = "#{Toto::Paths[:articles]}/#{Time.now.strftime("%Y-%m-%d")}#{'-' + slug if slug}.#{@config[:ext]}"
+  path = "#{Toto::Paths[:articles]}/#{Time.now.strftime("%Y-%m")}#{'-' + slug if slug}.#{@config[:ext]}"
 
   unless File.exist? path
     File.open(path, "w") do |file|
@@ -28,6 +28,7 @@ end
 desc "Publish my blog."
 task :publish do
   toto "publishing your article(s)..."
+  `git push github master`
   `git push heroku master`
 end
 
