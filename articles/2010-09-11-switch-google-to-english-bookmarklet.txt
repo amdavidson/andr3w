@@ -1,0 +1,24 @@
+title: Switch Google to English Bookmarklet
+date: 2010/09/11
+author: Andrew
+
+For those of you who travel internationally like myself, I am certain that you are frustrated when 
+you search Google and find that the results come back in the local, unintelligible language. There 
+are preference settings for this, but for me, they never seem to stick.
+
+Here’s a handy bookmarklet that should bring you back to the good old US English Google for search 
+pages. Drag this link to your bookmarks bar and click it whenever you see a Google search page in 
+the wrong language.
+
+[Google English][1]
+
+For the curious, here’s the code behind it. It’s a bit simple and probably leads to Google receiving 
+two localization strings, but fortunately they seem to only use the last one in the URL.
+
+	javascript:window.location=window.location.toString()+'&amp;hl=en-US';
+
+
+
+
+
+[1]: javascript:window.location=window.location.toString()+'&amp;hl=en-US';
