@@ -28,9 +28,12 @@ toto = Toto::Server.new do
   # set :ext,       'txt'                                     # file extension for articles
   # set :cache,      28800                                    # cache duration, in seconds
 
+
   set :url, 'http://andr3w.heroku.com/'
   set :title, 'andr3w'
   set :author, 'andrew'
+
+	set :permalink,   '/:year/:month/:title'
 
   set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
 end
