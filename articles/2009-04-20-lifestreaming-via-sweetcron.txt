@@ -3,7 +3,7 @@ author: Andrew
 date: 2009/04/20
 
 Had a [Tumblr][1] setup for a while at [amdavidson.me][2] but I already have a webserver and didn’t 
-like dealing with another host.
+like dealing with another host.~
 
 So I searched around a bit and [Sweetcron][3] came up as a viable alternative for an aggregator for 
 all my internet activities. It’s a pretty cool little app, very lightweight and seems to be pretty 

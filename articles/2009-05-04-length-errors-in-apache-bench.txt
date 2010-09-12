@@ -2,7 +2,7 @@ title: Length Errors in Apache Bench
 author: Andrew
 date: 2009/05/04
 
-Are you seeing errors for content length in your [Apache Bench][1] tests of your webserver?
+Are you seeing errors for content length in your [Apache Bench][1] tests of your webserver?~
 
 I had a hell of a time wondering what was going wrong with my webserver under load and finally 
 found the answer [here][2].

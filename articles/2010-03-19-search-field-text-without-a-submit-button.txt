@@ -4,7 +4,7 @@ date: 2010/03/19
 
 If you are trying to implement a search field in your website but do not plan on having a submit 
 button (relying on the user to click enter), you’re going to want to put instructions somewhere. 
-Here's how I handled it.
+Here's how I handled it.~
 
 In my case, I decided to populate the box it self with the words “Type and press enter to search”.
 	<input type="text" name="q" value="Type and press enter to search." id="searchfield" />

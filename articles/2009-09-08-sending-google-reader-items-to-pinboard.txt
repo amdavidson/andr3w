@@ -7,7 +7,7 @@ I just started using [Pinboard][1] as an alternative to my previous use of [Deli
 
 One cool thing that I was able to work out (that I had trouble with using Instapaper) is using the 
 new [Send To][4] feature in [Google Reader][5], I can now send links directly to Pinboard as unread 
-items or bookmarks.
+items or bookmarks.~
 
 The [Pinboard blog][5] has basic instructions for sending as bookmarks:
 

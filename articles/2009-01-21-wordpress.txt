@@ -2,7 +2,7 @@ title: Wordpress
 date: 2009/01/21
 author: Andrew
 
-Switched this blog from [Mephisto][1] to [Wordpress][2], not a big migration yet, as there were 
+Switched this blog from [Mephisto][1] to [Wordpress][2]~, not a big migration yet, as there were 
 only three posts to move.
 
 Nothing against Mephisto, but I’d like to focus my efforts on my other site, and use Wordpress for 

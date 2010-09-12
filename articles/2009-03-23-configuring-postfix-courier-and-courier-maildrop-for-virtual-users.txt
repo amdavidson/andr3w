@@ -2,7 +2,7 @@ title: Configuring Postfix, Courier, and Courier-Maildrop for Virtual Users
 author: Andrew
 date: 2009/03/23
 
-Here are some highlights for configuring Postfix to use Courier-Maildrop for local delivery.
+Here are some highlights for configuring Postfix to use Courier-Maildrop for local delivery.~
 
 This allows some advantages over just having postfix deliver, because you can do server-side 
 filtering of spam and mailing list messages to de-clutter your inbox.

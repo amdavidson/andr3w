@@ -4,7 +4,7 @@ author: Andrew
 
 I use git for all my projects… I love the ability to commit changes when I’m on an airplane or 
 stuck somewhere without internet access. However, I still like to be able to push my git project 
-to a remote server for backup and accessibility, and I’m not going to pay for [github][1]. Don’t 
+to a remote server for backup~ and accessibility, and I’m not going to pay for [github][1]. Don’t 
 get me wrong, github is fine for public projects and collaborative development, but for my personal 
 development stuff, it’s an unnecessary expense.
 

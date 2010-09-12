@@ -2,7 +2,7 @@ title: Site Redesign
 author: Andrew
 date: 2009/04/13
 
-Changed up the site a little. More to come, wanna try my hand at making the typography interesting.
+Changed up the site a little. More to come, wanna try my hand at making the typography interesting.~
 
 I just thought the old design was a little over done, so thanks to the awesome theming capability 
 of Wordpress… Here’s a new one.

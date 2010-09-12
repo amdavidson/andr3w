@@ -4,7 +4,7 @@ author: Andrew
 
 For those of you who travel internationally like myself, I am certain that you are frustrated when 
 you search Google and find that the results come back in the local, unintelligible language. There 
-are preference settings for this, but for me, they never seem to stick. Here's my solution.
+are preference settings for this, but for me, they never seem to stick. Here's my solution.~
 
 Here’s a handy bookmarklet that should bring you back to the good old US English Google for search 
 pages. Drag this link to your bookmarks bar and click it whenever you see a Google search page in 

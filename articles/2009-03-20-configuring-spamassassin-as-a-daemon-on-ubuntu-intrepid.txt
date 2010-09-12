@@ -3,7 +3,7 @@ author: Andrew
 date: 2009/03/20
 
 Here is the process I took to install Spamassassin as a daemon working with Postfix to process 
-incoming mail.
+incoming mail.~
 
 I’ll also be trying to reduce the memory footprint while still getting acceptable performance. Mind 
 you, this is being implemented on a low volume server, so these settings may not be applicable to a 

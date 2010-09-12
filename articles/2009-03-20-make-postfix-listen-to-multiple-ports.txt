@@ -2,7 +2,7 @@ title: Make Postfix Listen to Multiple Ports
 author: Andrew
 date: 2009/03/20
 
-If you need postfix to listen on multiple ports (like I do) add lines like the following (replace 
+If you need postfix to listen on multiple ports (like I do) add lines like the following~ (replace 
 numbers with whatever ports you desire):
 
 In /etc/postfix/master.cf:

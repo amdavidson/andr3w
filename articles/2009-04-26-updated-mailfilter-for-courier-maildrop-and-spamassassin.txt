@@ -4,7 +4,7 @@ date: 2009/04/26
 slug: updated-mailfilter-for-courier-maildrop-and-spamassassin
 
 My spam count has exploded in the last few days, so I made a decision to adjust my filtering a 
-little more.
+little more.~
 
 Previously, all messages that got more than 5 points in SpamAssassin tests were flagged and sent 
 to my .Spam folder. This got to be a bit of an issue as I still check there to make sure that no 

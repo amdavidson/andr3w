@@ -2,7 +2,7 @@ title: Migrating an Email Server
 author: Andrew
 date: 2009/03/21
 
-Here are the steps that I went through to migrate my Postfix/Courier server from Slicehost to Mosso.
+Here are the steps that I went through to migrate my Postfix/Courier server from Slicehost to Mosso.~
 
 1. Check current DNS MX records for applicable domains. I had mine set to all go through a central 
 A record (my mail server) so it was easy.

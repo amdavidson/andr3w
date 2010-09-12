@@ -2,7 +2,7 @@ title: Hashtag and Username Linking in Twitter Apps
 author: Andrew
 date: 2009/05/12
 
-Are you trying to add automatic [hashtag][1] and username hot linking in your PHP twitter app?
+Are you trying to add automatic [hashtag][1] and username hot linking in your PHP twitter app?~
 
 I just tried to do this with my [amdavidson.me][2] lifestreaming site. It’s just two nested regular 
 expressions. If there’s some problem with nested preg_replace functions, or if any regular 

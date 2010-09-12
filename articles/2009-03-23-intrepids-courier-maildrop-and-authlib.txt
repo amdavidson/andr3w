@@ -3,7 +3,7 @@ author: Andrew
 date: 2009/03/23
 
 Ubuntu 8.10’s courier-maildrop is not compiled against courier-authlib and so cannot read from many 
-of the supported authentication schemes that authlib can support.
+of the supported authentication schemes that authlib can support.~
 
 Fortunately, Debian Lenny’s can. So if you’re having trouble you can try and install the package 
 from that distribution, YMMV.
