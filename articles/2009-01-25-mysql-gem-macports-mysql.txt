@@ -3,7 +3,9 @@ author: Andrew
 date: 2009/01/25
 slug: mysql-gem-macports-mysql
 
-I always forget this… so this is as much a note for me as anything else.~
+I always forget this… so this is as much a note for me as anything else.
+
+~
 
 Especially because I’m basically just lifting this info from [here][1].
 

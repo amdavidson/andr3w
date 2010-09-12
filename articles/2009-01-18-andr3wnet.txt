@@ -2,7 +2,9 @@ title: andr3w.net
 date: 2009/01/18
 author: Andrew
 
-Welcome to andr3w.net.~
+Welcome to andr3w.net. 
+
+~
 
 This site has a very simple purpose, in my free time I code my personal site, but that site is 
 becoming more and more of a photoblog and less and less web development content seems relevant 

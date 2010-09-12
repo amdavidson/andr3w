@@ -3,7 +3,9 @@ author: Andrew
 date: 2009/01/19
 
 If you have recently upgraded rails and your cron jobs for acts_as_xapian are failing with the 
-error ``undefined method `cache_template_loading='`` check out this~ rails [commit][1].
+error ``undefined method `cache_template_loading='`` check out this rails [commit][1].
+
+~
 
 You may have a deprecated method and need to remove the following from your
 config/environments/production.rb:

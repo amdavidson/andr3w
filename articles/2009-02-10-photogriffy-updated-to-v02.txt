@@ -2,11 +2,11 @@ title: photogriffy updated to v0.2
 date: 2009/02/10
 author: Andrew
 
-photogriffy.net was upgraged to v0.2, this is a pretty major update.~ I’ve changed the backend to be 
-based entirely on the Flickr [API][1]. I was able to crank it all out with rails and the 
-[flickraw][2] gem over the course of a few hours. There are still a lot of features I want to add 
-and a bunch of formatting to do, but the site works as it stands. Rails truly is an amazing 
-prototyping framework.
+photogriffy.net was upgraged to v0.2, this is a pretty major update. ~
+I’ve changed the backend to be based entirely on the Flickr [API][1]. I was able to crank it all 
+out with rails and the [flickraw][2] gem over the course of a few hours. There are still a lot of 
+features I want to add and a bunch of formatting to do, but the site works as it stands. Rails 
+truly is an amazing prototyping framework.
 
 This is part of a larger update to the way I post my photos to the web. It’s getting a bit 
 scattered with some photos posted to [AMDavidson.com][3], some to [AMDavidson.me][4], some to 
