@@ -1,5 +1,5 @@
 builder
 rdiscount
-toto --version 0.4.6a --source http://gems.amdavidson.net
+toto --version 0.4.6b --source http://gems.amdavidson.net
 nokogiri
 
