@@ -1,0 +1,54 @@
+title: Configuring PostgreSQL for Ruby on OSX
+date: 13/09/2010
+
+I found it to be a bit of a bear to get PostgreSQL installed on my OS 10.6 Snow Leopard system. So 
+as I was going along I took notes. Here's how I managed to get it up and running.
+
+~
+
+Despite the ease of pushing to [Heroku][h] for my projects, I like to have a local development 
+environment. I have never used PostgreSQL before, and want to make sure that there are no issues 
+with bringing it up for a new project I am starting. I first checked what version of PostgreSQL 
+Heroku was [running][faq] and endeavored to get that running on my local installation.
+
+First, [install MacPorts][mp_install] on your machine.
+
+Then install PostgreSQL with the following command: 
+	$ sudo port install postgresql83 postgresql83-server
+
+Configure a default database with the following commands (these will also be listed at the end of 
+the MacPorts PostgreSQL installation): 
+	$ sudo mkdir -p /opt/local/var/db/postgresql83/defaultdb
+	$ sudo chown postgres:postgres /opt/local/var/db/postgresql83/defaultdb
+	$ sudo su postgres -c '/opt/local/lib/postgresql83/bin/initdb -D /opt/local/var/db/postgresql83/defaultdb'
+	
+It seems that some users, including myself, have issues with the last command. If you get the error: 
+	shell-init: error retrieving current directory: getcwd: cannot access parent directories: Permission denied
+	could not identify current directory: Permission denied
+	could not identify current directory: Permission denied
+	could not identify current directory: Permission denied
+	The program "postgres" is needed by initdb but was not found in the
+	same directory as "initdb".
+	Check your installation.
+	
+Try running this command (from [here][dscl1] and [here][dscl2]): 
+	$ sudo dscl . -create /Users/postgres UserShell /usr/bin/false
+	$ sudo dscl . -create /Users/postgres NFSHomeDirectory /opt/local/var/db/postgresql83
+
+After the dust has settled and you have PostgreSQL running, you'll likely want to get the gem 
+installed for Ruby to get integrated. 
+
+Make sure that <code>/opt/local/lib/postgresql83/bin</code> is in your <code>$PATH</code>. Then 
+installing <code>do_postgres</code> is as easy as running: 
+	$ gem install do_postgres 
+
+Hope that works for someone.
+
+
+
+
+[h]: http://heroku.com
+[faq]: http://docs.heroku.com/database#frequently-asked-questions
+[mp_install]: http://www.macports.org/install.php
+[dscl1]: http://shifteleven.com/articles/2008/03/21/installing-postgresql-on-leopard-using-macports#comment-161
+[dscl2]: http://shifteleven.com/articles/2008/03/21/installing-postgresql-on-leopard-using-macports#comment-169
