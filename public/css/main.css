@@ -85,8 +85,8 @@ h1, h2, h3, h4 {
   font-weight: 600;
 }
 code {
-  font-family: 'Monaco', Courier, mono;
-	font-size:12px;
+  font-family: 'Anonymous Pro', 'Monaco', Courier, mono;
+	font-size:10px;
 }
 pre {
 	padding-left: 20px;
