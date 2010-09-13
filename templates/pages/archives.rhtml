@@ -1,6 +1,9 @@
 <h1><%= @path %></h1>
 <ul>
   <% if archives.length > 0 %>
+  
+  	<% archives_sorted = archives.sort { |a,b| b[:date] <=> a[:date] } %>
+  	<% archives = archives_sorted %>
     <% for entry in archives %>
       <li>
         <a href="<%= entry.path %>"><%= entry.title %></a>

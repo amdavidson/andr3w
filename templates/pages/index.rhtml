@@ -1,5 +1,7 @@
 <hr/>
 <section id="leader">
+	<% articles_sorted = articles.sort { |a,b| b[:date] <=> a[:date] } %>
+	<% articles = articles_sorted %>
 	<% for article in articles[0...1] %>
 		<header>
 	    <h1><a href="<%= article.path%>"><%= article.title %></a></h1>
@@ -30,6 +32,8 @@
 </section>
 <hr/>
 <section id="archives">
+	<% archives_sorted = archives.sort { |a,b| b[:date] <=> a[:date] } %>
+	<% archives = archives_sorted %>
   <%= archives[4..14] %>
 </section>
 
