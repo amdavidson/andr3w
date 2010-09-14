@@ -1,0 +1,33 @@
+title: Re-introducing Shorten
+date: 14/09/2010
+
+After toying a bit with yourls, I went looking for a way to get a URL shortener setup that was a 
+bit less complicated and could be deployed on [Heroku][heroku] (a service that I have recently 
+become totally enamored with). This is what I ended up with.
+
+After a few Google searches I came across [this][orig] posting by [Andrew Pilsch][creator]. In the 
+article he bluntly explains how to set up your own URL shortener and provides code for a Sinatra 
+based URL shortener.
+
+This seemed perfect, [Sinatra][sinatra] was something that I have also been wanting to tinker with 
+and this seemed like a good place to start. 
+
+The codebase provided was a good framework for what I wanted but didn't quite check all the boxes 
+so I set out modifying it to be deployable to Heroku and to generate random short URLs (a la bit.ly) 
+rather than the sequential ones that it had originally been configured for. 
+
+I posted my fork of the code on [Github][ghrepo] and have a running example at 
+[&#x27bc;.ws][example].
+
+Check it out and let me know what you think. If you get it running somewhere else, 
+[let me know][mail] I'd love to see it.
+
+
+[heroku]: http://heroku.com 
+[orig]: http://blog.pilsch.com/past/2009/6/7/shorten_your_own_damn_urls/
+[creator]: http://andrew.pilsch.com/
+[example]: http://xn--8gi.ws
+[heroku]: http://heroku.com
+[sinatra]: http://sinatrarb.com
+[ghrepo]: http://github.com/amdavidson/shorten
+[mail]: mailto:andrew@andr3w.net
