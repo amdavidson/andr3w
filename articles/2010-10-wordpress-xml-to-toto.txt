@@ -2,7 +2,7 @@ title: Wordpress XML to toto
 date: 2010/10/06
 author: Andrew
 
-In my efforts to convert my blog at [amdavidson.com][http://amdavidson.com] I wrote a little script 
+In my efforts to convert my blog at [amdavidson.com](http://amdavidson.com) I wrote a little script 
 to convert the xml file that Wordpress can export into text files that toto understands. 
 
 It's *extremely* hackish and will likely not generate 100% solid data, I had to edit ~10 of my 140 
