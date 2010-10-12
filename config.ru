@@ -1,9 +1,14 @@
 require 'toto'
 require 'nokogiri'
+require 'coderay'
+require 'rack/codehighlighter'
 
 # Rack config
 use Rack::Static, :urls => ['/css', '/js', '/images', '/favicon.ico'], :root => 'public'
 use Rack::CommonLogger
+use Rack::Codehighlighter, :coderay, :markdown => true, :element => "pre>code", :pattern => /\A:::(\w+)\s*(\n|&#x000A;)/i, :logging => true
+
+
 
 if ENV['RACK_ENV'] == 'development'
   use Rack::ShowExceptions
